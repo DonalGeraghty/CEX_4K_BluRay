@@ -1,4 +1,4 @@
-import cex
+from tests import cex
 from playwright.sync_api import sync_playwright
 
 def main():
