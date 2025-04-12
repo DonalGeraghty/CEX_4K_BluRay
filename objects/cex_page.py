@@ -28,7 +28,7 @@ class CexPage:
     def click_next_page(self):
         self.next_page.click()
 
-    # complex actions
+    # complex data
     def get_all_blu_rays(self):
         cex_page = CexPage(self.page)
         old_url = self.page.url
