@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db5f545c-5b51-4692-afc9-d6dca56ed4cb" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/data_manipulation/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/manipulate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_new.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_old.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/class_objects/blu_ray.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/blu_ray.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_manipulation/data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/cex_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/cex_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/cex.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cex.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +58,7 @@
       <recent name="C:\Users\donal\PycharmProjects\CEX_4K_BluRay" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\donal\PycharmProjects\CEX_4K_BluRay\objects" />
       <recent name="C:\Users\donal\PycharmProjects\CEX_4K_BluRay\tests" />
       <recent name="C:\Users\donal\PycharmProjects\CEX_4K_BluRay" />
     </key>
