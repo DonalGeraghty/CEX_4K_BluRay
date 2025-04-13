@@ -1,54 +1,65 @@
-import os
 from datetime import date, timedelta
 
-import csv
+import os, csv
 import pandas as pd
 
+
 class Manipulate:
-    def read_csv(self, filename: str, filetype: str):
-        df = pd.read_csv(filename + filetype)
-        print(df.to_string())
-
-    def compare_old_new(self):
-        folder = 'data' + '//'
+    def get_today_file(self):
+        today_date = date.today()
         filetype = '.csv'
-        column = 'name'
+        return str(today_date) + filetype
 
+    def get_yesterday_file(self):
         today_date = date.today()
         yesterday_date = today_date - timedelta(days=1)
+        filetype = '.csv'
+        return str(yesterday_date) + filetype
 
-        yesterday = self.get_list_from_csv_column(folder + str(yesterday_date) + filetype, column)
-        today = self.get_list_from_csv_column(folder + str(today_date) + filetype, column)
+    def get_data_folder_path(self):
+        path = 'data//'
+        return path
+
+    def return_diff_yesterday_today(self):
+        column = "name"
+
+        yesterday_list = self.get_list_from_csv_column(self.get_data_folder_path() + self.get_yesterday_file(), column)
+        today_list = self.get_list_from_csv_column(self.get_data_folder_path() + self.get_today_file(), column)
 
         # Elements in today but not in yesterday
-        difference = list(set(today) - set(yesterday))
-        for index, ele in enumerate(difference):
-            print(str(index) + " " + ele)
+        difference = list(set(today_list) - set(yesterday_list))
+        return difference
+
+    def get_prices_from_list(self, filter_list):
+        df = pd.read_csv(self.get_data_folder_path() + self.get_today_file())
+        filtered_df = df[df['name'].isin(filter_list)]
+        result_df = filtered_df[['name', 'price']]
+        return result_df
 
     def get_list_from_csv_column(self, name: str, column: str):
         df = pd.read_csv(name)
         return df[column].tolist()
 
     def output_blu_rays(self, blu_ray_all):
-        filename = 'data' + '//' + str(date.today()) + '.csv'
+        filename = self.get_data_folder_path() + self.get_today_file()
+        headers = ["id", "name", "price"]
         with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow(["id", "name", "price"])
+            writer.writerow(headers)
             for index, blu_ray in enumerate(blu_ray_all):
                 writer.writerow([index, blu_ray.title, blu_ray.price])
 
     def get_repo_path_from_script(self):
-        """Gets the directory of the current Python script."""
         script_path = os.path.abspath(__file__)
         script_dir = os.path.dirname(script_path)
         return script_dir
 
-    def delete_other_csvs(self, file1: str, file2: str):
-        """Deletes all CSV files in a folder except for 'data1.csv' and 'data2.csv'.
+    def cleanup_files(self):
+        file_today = self.get_today_file()
+        file_yesterday = self.get_yesterday_file()
+        self.delete_other_csvs(file_today, file_yesterday)
 
-        Args:
-            folder_path (str): The path to the folder containing the CSV files.
-        """
+    def delete_other_csvs(self, file1: str, file2: str):
         folder_path = self.get_repo_path_from_script()
         print(folder_path)
         try:

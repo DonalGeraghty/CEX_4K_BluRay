@@ -1,6 +1,8 @@
 from playwright.sync_api import Page, expect
 from objects.blu_ray import Bluray
+
 import re, time
+
 
 class CexPage:
     def __init__(self, page: Page):
@@ -11,20 +13,27 @@ class CexPage:
         self.price_locator = ".product-prices"
         self.product_card_locator = ".search-product-card"
         self.cookies = self.page.locator("#cmpbntyestxt:has-text('Accept All Cookies')")
-        self.blu_ray_4k = self.page.locator('span.item-label:has-text("Blu-Ray 4K")').locator('..').locator(".checkmark")
-        self.in_stock_online = self.page.locator('span.item-label:has-text("In Stock Online")').first.locator('..').locator(".checkmark")
+        self.blu_ray_4k = self.page.locator('span.item-label:has-text("Blu-Ray 4K")').locator('..').locator(
+            ".checkmark")
+        self.in_stock_online = self.page.locator('span.item-label:has-text("In Stock Online")').first.locator(
+            '..').locator(".checkmark")
         self.next_page = self.page.locator('[aria-label="Next Page"]')
 
     def goto_website(self):
         self.page.goto(self.url)
+
     def assert_page_title(self):
         expect(self.page).to_have_title(re.compile(self.title))
+
     def accept_cookies(self):
         self.cookies.click()
+
     def filter_blu_ray_4k(self):
         self.blu_ray_4k.first.click()
+
     def filter_in_stock_online(self):
         self.in_stock_online.click()
+
     def click_next_page(self):
         self.next_page.click()
 
