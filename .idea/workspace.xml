@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db5f545c-5b51-4692-afc9-d6dca56ed4cb" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/message/email.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/2025-04-11.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/2025-04-12.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/manipulate.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/manipulate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/blu_ray.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/blu_ray.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/cex_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/cex_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/cex.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cex.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
