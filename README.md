@@ -10,4 +10,4 @@ MY_KEY="xxxx yyyy zzzz oooo"
 RECIPIENT="recipient@gmail.com"
 SENDER="sender@gmail.com"
 
-generate a pass key for MY_KEY , https://www.google.com/account/about/passkeys/ 
+generate a pass key for MY_KEY , https://support.google.com/mail/answer/185833?hl=en

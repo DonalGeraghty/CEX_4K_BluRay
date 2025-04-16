@@ -43,6 +43,7 @@ class Manipulate:
     def output_blu_rays(self, blu_ray_all):
         filename = self.get_data_folder_path() + self.get_today_file()
         headers = ["id", "name", "price"]
+        print(filename)
         with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(headers)
