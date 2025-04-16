@@ -1,3 +1,7 @@
 /data
 .env
 .idea/workspace.xml
+actions/__pycache__/manipulate.cpython-313.pyc
+message/__pycache__/email.cpython-313.pyc
+objects/__pycache__/cex_page.cpython-313.pyc
+.idea/workspace.xml
