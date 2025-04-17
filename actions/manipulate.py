@@ -17,7 +17,7 @@ class Manipulate:
         return str(yesterday_date) + filetype
 
     def get_data_folder_path(self):
-        path = 'data//'
+        path = ''
         return path
 
     def return_diff_yesterday_today(self):
