@@ -1,9 +1,17 @@
 .env
+*-*-*.csv
 .idea/workspace.xml
 actions/__pycache__/manipulate.cpython-313.pyc
 message/__pycache__/email.cpython-313.pyc
 objects/__pycache__/cex_page.cpython-313.pyc
 objects/__pycache__/blu_ray.cpython-313.pyc
+tests/__pycache__/cex.cpython-313.pyc
+.idea/CEX_4K_BluRay.iml
+.idea/misc.xml
+.idea/workspace.xml
+message/__pycache__/email.cpython-313.pyc
+objects/__pycache__/blu_ray.cpython-313.pyc
+objects/__pycache__/cex_page.cpython-313.pyc
 tests/__pycache__/cex.cpython-313.pyc
 .idea/CEX_4K_BluRay.iml
 .idea/misc.xml
