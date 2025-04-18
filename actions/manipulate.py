@@ -59,7 +59,8 @@ class Manipulate:
     def get_repo_path_from_script(self):
         script_path = os.path.abspath(__file__)
         script_dir = os.path.dirname(script_path)
-        return script_dir
+        parent_dir = os.path.dirname(script_dir)
+        return parent_dir
 
     def cleanup_files(self):
         file_today = self.get_today_filename()
